@@ -13,4 +13,4 @@ GGsync.jar
 GGsync.log
 *.p12
 !.gitkeep
-!/output/GGsync_heroku.properties
+/output/GGsync_heroku.properties
