@@ -66,3 +66,7 @@ task copy(type: Copy) {
   from 'build/libs/GGsync.jar'
   into '.'
 }
+
+task stage() {
+  dependsOn build
+}
