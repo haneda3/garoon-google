@@ -64,15 +64,15 @@ jar {
 
 task copy(type: Copy) {
   from 'build/libs/GGsync.jar'
-  from 'GGsync_heroku.properties'
+  from 'heroku_prop/GGsync.properties'
   into './output/'
 }
 
 task createprop() {
   dependsOn copy
   doLast {
-    ant.replace(file: 'output/GGsync_heroku.properties', token: '@garoon.account@', value: GAROON_ACCOUNT)
-    ant.replace(file: 'output/GGsync_heroku.properties', token: '@garoon.password@', value: GAROON_PASSWORD)
+    ant.replace(file: 'output/GGsync.properties', token: '@garoon.account@', value: GAROON_ACCOUNT)
+    ant.replace(file: 'output/GGsync.properties', token: '@garoon.password@', value: GAROON_PASSWORD)
   }
 }
 
